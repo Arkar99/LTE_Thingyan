@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LTE Thingyan</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Preload Splash.png to avoid loading delay when clicking ရေပက်မယ် button -->
+        <link rel="preload" href="images/Splash.png"  as="image" type="image/png"/>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon_io/site.webmanifest">
+    <body>
+        <!-- The first screen -->
+        <div class="container container-one">
+            <div class="flex-container">
+                <div class="header-container">
+                    <!-- Empty 'header-container' as a placeholder for flex-box you can put contents here but don't remove it. -->
+                </div>
+                <div class="img-container">
+                    <img src="images/starfish.png" alt="Starfish pouting" class="starfish">
+                    <img src="images/characters1.png" alt="Octopus and Squid playing with water" class="main-chars">
+                </div>
+                <div class="button-container">
+                    <button class="btn" onclick="clickTransition();">ရေပက်မယ် 🌊</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Second screen -->
+        <div class="container container-two hidden">
+            <div class="flex-container">
+                <div class="header-container">
+                    <h1 class="header-text">မြန်မာသက္ကရာဇ် ၁၃၈၆ ခုနှစ်ကို<br>ကြိုဆိုပါတယ်</h1>
+                </div>
+                <div class="img-container">
+                    <img src="images/characters2.png" alt="Octopus wishing" class="main-chars">
+                </div>
+                <div class="button-container">
+                    <button class="btn" onclick="goBack();">နောက်သို့</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water splash animation that happens when clicking ရေပက်မယ် -->
+        <div id="splash-container" class="hidden">
+            <p>ဗွမ်း</p>
+        </div>
+
+        <!-- Padauk decorations at each corner of the screen -->
+        <img src="images/Padauks.png" alt="top-left-padauk" id="topLeft">
+        <img src="images/Padauks.png" alt="top-right-padauk" id="topRight">
+        <img src="images/Padauks.png" alt="bottom-left-padauk" id="botLeft">
+        <img src="images/Padauks.png" alt="bottom-right-padauk" id="botRight">
+        
+        <!-- Javascript -->
+        <script src="app.js"></script>
+        <!-- Javascript tsParticles library from https://particles.js.org/ to make confetti effect -->
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    </body>
+</html>
