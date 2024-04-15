@@ -2,8 +2,8 @@ const splashContainer = document.getElementById('splash-container');
 const containerOne = document.querySelector('.container-one');
 const containerTwo = document.querySelector('.container-two');
 
+// JS particles library
 // Check https://particles.js.org/ for particles effect
-
 const defaults = {
   spread: 360,
   ticks: 200,
@@ -50,11 +50,13 @@ function Confetti_1() {
   })
 }
 
+// Function that plays particles effect
 function shootConfetti() {
   setTimeout(Confetti_1, 0);
   setTimeout(Confetti_1, 200);
 }
 
+// Function that plays water splash animation and screen transition
 function splashAnimStart() {
   splashContainer.classList.remove("hidden");
   splashContainer.classList.add("splash-animation");
@@ -64,17 +66,20 @@ function splashAnimStart() {
   }, 500)
 }
 
+// Function that resets the water splash after its animation ends
 function splashAnimEnd() {
   shootConfetti();
   splashContainer.classList.add("hidden");
   splashContainer.classList.remove("splash-animation");
 }
 
-function clickTransition() {
+// Function that triggers when clicking splash button
+function splashTransition() {
   splashAnimStart();
   setTimeout(splashAnimEnd, 2000);
 }
 
+// Function that triggers when clicking go back button
 function goBack(){
   containerTwo.classList.add("hidden");
   containerOne.classList.remove("hidden");
